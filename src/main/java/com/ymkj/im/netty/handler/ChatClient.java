@@ -39,7 +39,7 @@ public class ChatClient implements CommandLineRunner {
                     ch.pipeline().addLast(new ChatClientHandler());
                 }
             });
-            for(int i=0;i<30000;i++) {
+            for(int i=0;i<40000;i++) {
                 ChannelFuture f = b.connect(host, port).sync();
             }
             ChannelFuture f = b.connect(host, port).sync();
